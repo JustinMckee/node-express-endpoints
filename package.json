@@ -1,0 +1,26 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "Backend node, express",
+	"license": "ISC",
+	"author": "Justin McKee <thisisjustinmckee@gmail.com>",
+	"type": "module",
+	"main": "dist/server.js",
+	"scripts": {
+		"start": "node dist/server.js",
+		"dev": "nodemon --watch src --ext ts --exec 'npm run build && npm run start'",
+		"clean": "rm -rf dist",
+		"build": "npm run clean && tsc --project tsconfig.json --outDir dist"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.19",
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.1.0",
+		"nodemon": "^3.1.10",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^5.1.0"
+	}
+}
